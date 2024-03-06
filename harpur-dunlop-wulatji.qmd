@@ -1,0 +1,17 @@
+---
+title: "Land and Language in Colonial Australian Verse"
+author:
+  - name: Michael Falk
+    orcid: 0000-0001-9261-8390
+    affiliation: University of Melbourne
+    url: https://findanexpert.unimelb.edu.au/profile/1043380-michael-falk
+---
+
+```{r}
+#| label: fig-harpur-lang
+#| fig-cap: Indigenous Vocabulary in *The Kangaroo Hunt*
+#| fig-subcap: how are these labelled; like this? | Like this?
+harpur <- readxl::read_xlsx("harpur-lang.xlsx")
+knitr::kable(harpur)
+```
+

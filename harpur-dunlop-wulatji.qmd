@@ -10,8 +10,8 @@ author:
 ```{r}
 #| label: fig-harpur-lang
 #| fig-cap: Indigenous Vocabulary in *The Kangaroo Hunt*
-#| fig-subcap: how are these labelled; like this? | Like this?
-harpur <- readxl::read_xlsx("harpur-lang.xlsx")
+#| fig-subcap: how are these labelled; like this?
+harpur <- readxl::read_xlsx("data/harpur-lang.xlsx")
 knitr::kable(harpur)
 ```
 

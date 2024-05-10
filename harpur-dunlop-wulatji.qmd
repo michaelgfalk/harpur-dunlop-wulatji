@@ -5,13 +5,150 @@ author:
     orcid: 0000-0001-9261-8390
     affiliation: University of Melbourne
     url: https://findanexpert.unimelb.edu.au/profile/1043380-michael-falk
+bibliography: references.bib
 ---
+```{r include = FALSE}
+# Setup cell
+knitr::opts_chunk$set(echo = FALSE)
+options(knitr.kable.NA = '')
+
+DATA_DIR <- "data"
+harpur <- file.path(DATA_DIR, "harpur-lang.xlsx") |> readxl::read_xlsx()
+dunlop <- file.path(DATA_DIR, "dunlop-lang.xlsx") |> readxl::read_xlsx()
+```
+
+To occupy Australia, its European invaders had to name it. This was not merely a matter of naming places, though that of course was crucial. They also needed to name the things the made the places. They needed to name the trees that dropped their autumn bark, the deer-like creatures that hopped on two legs, the fires that ripped through crackling scrubland. They needed to name the fickle weather, the whirling dust, the intermittent streams. They needed to name hundreds of parrots and pigeons and snakes and dragons. They needed to name the people from whom they took the land. To conquer Australia, they 'conquered space'. With a touch of the namer's wand, they changed a strange land 'into a familiar world of routes and places' [@tuan_space_1977, p.83].
+
+The invaders mined Indigenous languages for names. Indigenous names had the advantage of establishment. The Indigenous name is the 'real and proper' name, thought Lachlan Macquarie [quoted in @carter_road_2010, p. 328]. But the reality and propriety of the Europeans was not the reality and propriety of the peoples they expropriated. When they took words, they took them. In East Africa, they took the affection of people meeting in the street—*Mambo?* (What's up?), *Jambo!* (No problems!)—and turned it into "mumbo-jumbo." In Australia, they debased words such as *gin* and *lubra*, while mixing myriad other words from myriad tongues into the new Australian English.
+
+In the 1840s, two invader poets observed this situation, and attempted to rectify it. The poets were Eliza Hamilton Dunlop and Charles Harpur. Both poets incorporated Indigenous vocabulary into their poems in a deliberate and ostensibly humanitarian way. While many scholars have observed that Dunlop and Harpur use Indigenous words in their English verse, this is the first study of which words they used, why they used them, and what languages they came from.
+
+Eliza Hamilton Dunlop (**DATES**) was the Irish wife of the Protector of Aborigines in Wollombi (see @fig-map). She befriended a local poet, Wulatji, learned his tongue, and published a transcription and translation of his poetry in the *Sydney Morning Herald* [@wulatji_native_1848].[^1] Twenty-first century critics have praised the 'sympathy' of Dunlop's translation, while noting its 'colonialism' and 'cultural appropriation' by more recent standards [@oleary_giving_2004]. @wafer_ghost-writing_2017 has verified the accuracy of her translation, and used it to reconstruct Wulatji's song-writing practices. He also highlights a remarkable fact about Dunlop's translation, which has hitherto escaped literary analysis: she translates many of Wulatji's words by *other* Indigenous words, often from far-flung languages.
+
+[^1]: She later adapted the poem for Isaac Nathan's song collection, *The Southern Euphrosyne* [@dunlop_pialla_1848].
+
+Charles Harpur was a currency lad, born to convict parents on the banks of Deerubbin (the Hawkesbury; see @fig-map). His poetry is voluminous and varied, but the violence of the frontier, the ignorance of the settler, and the brutality of empire are key themes in many of his poems. He has been judged complicit in the imaginative expropriation of Aboriginal lands [@van_toorn_terrors_1992], and many of his poems do indeed figure Australia as an *terra nullius* ripe for settlement. In *The Kangaroo Hunt* (1843-1867), Harpur reckons with his own contradictory impulses. He acknowledges Indigenous Australians as the 'former lords of the soil', and includes `r nrow(harpur)` Indigenous words in the text of the poem. In a series of footnotes, he localises the words to particular Indigenous groups, and argues for the appropriateness of Indigenous words to poetry. The poem has a complex textual history—as do nearly all Harpur's poems [@eggert_charles_2016]. The earliest evidence for the poem is an excerpt published in the *Weekly Register* in 1843 [@harpur_australian_1843]. At that time, Harpur was living in the Hunter Valley, around Singleton. All the surviving complete versions of the poem, however, date to the 1860s, when Harpur was living far to the south in Eurobodalla. Although Harpur revised the poem considerably, *The Kangaroo Hunt* retains is character as poem of the 1840s, extolling the beauties of the "loud Nepean," "old Hawkesbury" and "rapid Hunter" rivers where Harpur spent his youth and early adulthood [@harpur_charles_2019, h209-bf].[^2] It is nonetheless difficult to pin down the poem's Indigenous vocabulary, given its complex textual history and the fragmentary evidence of Harpur's own biography
+
+[^2]: Paul Eggert's variorum edition of Harpur's poetry provides an 'h-number' for each version of each poem. I refer to Harpur's poems by h-number throughout. Each of *Kangaroo Hunt*'s six parts has its own h-number.
+
+```{r}
+#| label: fig-map
+#| fig-cap: "Deerubbin and the Hunter in the 1840s"
+ggplot2::ggplot()
+```
+
+My comparison of Harpur and Dunlop has two aims. The first aim is to contrast the Dunlop's and Harpur's poetics: I argue that Dunlop is a *universalist*, while Harpur is a *particularist*. The second aim is to clarify the problem of *linguistic representation*—or more verbosely, the *literary representation of Indigenous languages*.
+
+Both Dunlop and Harpur represent Indigenous language for humanitarian ends. Dunlop attempts to demonstrate the universality of the poetic impulse by transcribing and translating a sample of Awabakal poetry. Her 'sentimental' politics relies on the universality of human impulse to justify the universality of human rights (**REFS**). Harpur attempts to do justice to Indigenous ecopoetics by drawing a link between the euphony of particular Indigenous words and the ecological knowledge of particular Indigenous people. Dunlop's universalism and Harpur's particularism have both been subject to scholarly critique, but have never been compared. The comparison will throw significant features of their technique into relief, and reveal the variety of humanitarian poetry at a grisly moment in Australia's colonial history.
+
+Dunlop and Harpur also raise the broader question of how to represent a language. Both Harpur and Dunlop wish to represent Indigenous languages as *poetic*, but they do so in different ways. Dunlop produces a *transcription*, *translation* and *glossary*; Harpur produces *words* and *philological footnotes* embedded in an original poem. These different forms of representation convey different ideas about the nature of Indigenous language. Dunlop presents Awabakal, Walatji's language, as syntactic and literary. Harpur presents Darkinyung and Wiradjuri as verbal and oral. Despite these differences, Dunlop and Harpur draw on a similar stock of ideas about human language, rooted in the empiricist linguistics that then reigned in the English-speaking world [@aarsleff_study_1967].
+
+My discussion falls into three sections. In the first two sections, I substantiate my claims about Dunlop's universalism and Harpur's particularism. In the third section, I contextualise their linguistic representations, explaining the relevant aspects of empiricist and utilitarian philosophy of language, and linking this to the conquest of space in colonial poetry. If there is an enduring value to these early works of colonial literature, it is in their vexed and self-referential character.
+
+## Eliza Hamilton Dunlop: Universalism
+
+Dunlop's transcription Wulatji's poetry is short enough to quote in full.
+
+> Nung-Ngnun\
+Nge a runba wonung bulkirra umbilinto bulwarra;\
+Pital burra kultan wirripang bunto\
+\
+Nung-Ngnun\
+Nge a runba turrama berrambo, burra kilkoa:\
+Kurri wi, raratoa yella walliko,\
+Yulo Moane, woinya, birung poro bulliko,\
+\
+Nung-Ngnun\
+Nge a runba kan wullung, Makora, kokein,\
+Mip-pa-rai, kekul, wimbi murr ring kirrika:\
+Nge a runba mura ke-en kulbun kulbun murrung. [@wulatji_native_1848]
+
+It is difficult to say what precisely this is a transcription *of*. @oleary_giving_2004 [p. 92] argues from manuscript evidence that Dunlop fashioned a single poem from 'three short songs' by Wulatji. In a manuscript Dunlop composed, entitled "The Vase" @wafer_ghost-writing_2017 [p. 204] disagrees, arguing from metrical evidence that Wulatji's poem should actually be seen as four 'verses' rather than three discrete songs. Dunlop's published version supports O'Leary's view. She separates her transcription into three discrete sections, each with the heading 'Nung-Ngung' (*nannguyn*, 'song'). This suggests that each is a separate poem, but then the comma at the end of section two implies it is syntactically connected to section three. Is this a printer's error, or was it intended by Dunlop? If this comma is intentional, then perhaps Wafer's view is correct, and the eight lines of poetry should be understood as four couplets. But then why split the poetry into those three sections?
+
+Given the lack of context, the point is undecidable. There is no record of Dunlop and Wulatji's conversations. Did Wulatji produce one or more discrete texts at Dunlop's request, knowing they might be published? Did he produce a series of verse-examples to try and teach her about Awabakal versification? Did he improvise a performance to impress her?[^3] Dunlop preserves this ambiguity in her transcription and translation. Her title, 'Native Poetry', does not specify how many poems she transcribes. When she adapted her translation into an original song for Isaac Nathan, she used a similarly ambiguous title, 'Pialla Wollombi', which she glosses as 'the poetry or language of Wollombi' [@dunlop_pialla_1848]. All this is to suggest that Dunlop does not transcribe a text, but transcribes a corpus. She provides the reader a sample of Wulatji's poetry (one poem? three poems? four?), and shapes it into a single translation for readerly consumption.
+
+[^3]: According to Threlkeld, Wulatji was a popular guest, whose humourous 'gibes' and 'song and dance' routines were highly appreciated by Indigenous people throughout the region [quoted in @wafer_ghost-writing_2017, p. 200].
+
+She confers unity on the text even in the transcription. If Wafer is correct, and Dunlop has spliced three verses into two, she has done so to good purpose: in her transcription, each verse begins with the possessive 'Nge a runba' (*ngayaranpa*, 'our'), which is also repeated in the final line as a neat example of 'terminal modification' [@smith_poetic_1968, p. 53]. Dunlop partially replicates the anaphora on *ngayaranpa* in her translation, beginning each stanza with 'our' or 'ours'. For whatever reason, she chooses *not* to repeat the word at the end of the poem, as Wulatji does:
+
+>Our home is the gibber-gunyah,\
+Where hill joins hill on high;\
+Where the turruma and berrambo,\
+Like sleeping serpents lie;\
+And the rushing of wings, as the wangas pass,\
+Sweeps the wallaby’s print from the glistening grass.\
+\
+Ours are the makoro gliding,\
+Deep in the shady pool;\
+For our spear is sure, and the prey secure...\
+Kanin, or the bright gherool.\
+Our lubras sleep by the bato clear,\
+That the Amygest’s track hath never been near.\
+\
+Ours is the koolema flowing\
+With precious kirrika stored;\
+For fleet the foot, and keen the eye,\
+That seeks the nukkung’s hoard;\
+And the glances are bright, and the footsteps are free,\
+When we dance in the shade of the karakon tree.
+
+```{r}
+#| label: fig-dunlop-lang
+#| fig-cap: "Indigenous Vocabulary in Dunlop's translation of Wulatji"
+knitr::kable(dunlop)
+```
+
+## Charles Harpur: Particularism
+
+Harpur's poem is on a grander scale than Dunlop's. *The Kangaroo Hunt, or A Morning in the Mountains: A Descriptive Poem in Six Parts: By Charles Harpur. An Australian* is a long and ambitious work that has been described as "Australia's first epic poem" [@gelder_colonial_2020, p. REF]. It describes an "idealised" kangaroo hunt that lasts from sunrise to sunset. As the youthful party of white hunters harry the kangaroo, Harpur describes the sights and sounds of the Australian bush, expanding on the verse in detailed footnotes. The poem pulls in two directions. In one direction, Harpur seeks to "idealise" the hunt, blending the details of many possible hunts into "one Eden-piece embathed with a luminous atmosphere of sentiment" (h209-af). In another direction, Harpur seeks to capture specific details of land and language, to capture the particular qualities of each bird, tree, geological feature—or Indigenous word.
+
+Harpur uses `r nrow(harpur)` Indigenous words in either the body of the poem or its footnotes (@fig-harpur-lang).[^4] Generally speaking, Harpur's transcriptions are sound, and it is not difficult to look up the words in a modern dictionary. It is nonetheless difficult to identify the languages of Harpur's poem due to three problems The first problem is space: Harpur does not name his informants, or describe precisely where he encountered them. The only geographic detail he provides is in his footnote on the words "jimbuck" and "whirring", which I discuss below. The second problem is time: Harpur began the poem in the 1840s, while living on the Hunter, and completed it decades later, while living in Eurobodalla. How much of the poem did he write in each region, and when did he learn or insert the Indigenous words? The *only* Indigenous word we can be certain Harpur inserted in the 1840s is "duaralli", since this is the only Indigenous word in the published exctract of 1843 [@harpur_australian_1843]. The third problem is linguistics: The languages of South-East Australia are all members of the Pama-Nyungan language family, and share many words. By the 1840s, many of these words had already entered Australian English. Today, many of these words have been lost due to colonisation. Despite these problems, it is possible to be reasonably confident about the broad patterns of Harpur's Indigenous learning.
+
+[^4]: I am indebted to Jim Wafer for sharing his notes on Harpur's Indigenous vocabulary, which helped especially with the difficult *teleltella*.
 
 ```{r}
 #| label: fig-harpur-lang
-#| fig-cap: Indigenous Vocabulary in *The Kangaroo Hunt*
-#| fig-subcap: how are these labelled; like this?
-harpur <- readxl::read_xlsx("data/harpur-lang.xlsx")
+#| fig-cap: "Indigenous Vocabulary in *The Kangaroo Hunt*"
 knitr::kable(harpur)
 ```
 
+Harpur does provide some help resolving these problems, in the final footnote of the poem:
+
+> Jimbuc is an aboriginal name of little shag-haired species of kangaroo which is peculiar to mountain copses. It may be called the mountain wallaby, being in relation to the wallaroo what the common wallaby is to the kangaroo proper. The jimbuc is the least elegant in its form, and the dullest in its nature, of all the kangaroo kinds—of all such at least as I happen to be acquainted with. The Blacks of the Hunter call the sheep jimbuc, no doubt from a resemblance, however remote, arising out of the hairy shagginess of the one and the woolliness of the other. But this, like most other of our indigenous animals, is named variously by the aboriginal tribes of different localities: and is (or was) known amongst the Hawksbury mountains by the native name of _whirring_. (h209-gf)
+
+If Harpur is correct, then an old etymological problem has found its solution. Today, *jumbuck* is a cherished Australian slang word for sheep, immortalised in the popular song *Waltzing Matilda*. @dixon_aboriginal_2006 [p. 56] suggest that the word may derive from English *jump*, or perhaps from the Gamilaraay word *dhimba*, but admit that neither hypothesis can be 'confirmed'. Harpur's footnote provides concerete support for the hypothesis that *jumbuck* derives from Gamilaraay *dhimba*. The hypothesis gains strength given the specificity of Harpur's description: Harpur insists that the word referred specifically to the 'mountain wallaby', which from his description is clearly the brush-tailed rock wallaby (*Petrogale penicillata*). The compilers of the modern *Gamilaraay-Yuwalaraay-Yuwaalayaay* dictionary were unable to find a word specifically for the brush-tailed-rock wallaby, and record the word *dhimba* solely in its meaning of *sheep* [@lissarrague_gamilaraay_2003, p. 62]. If we can trust Harpur's testimony on this point, then the old riddle of *jumbuck* is solved, and an new entry may be made in an essential document of a reviving language.
+
+Harpur's testimony also allows us to identify more clearly who are the people of the "Hawksbury mountains" and the "Hunter." By the "Hawksbury mountains," Harpur presumably refers to the rocky highlands to the north of the Hawkesbury River (Deerubbin), near where he grew up. If this is so, then the language he would most likely encounter in that region is Darkinyung. The first road between Sydney and the Hunter Valley ran through this region Harpur calls the "Hawksbury mountains," so Harpur is likely to have traversed the region numerous times when moving between the Hunter, the Hawkesbury and Sydney.
+
+The case for "the Blacks of the Hunter" is more difficult. In the 1840s and 50s, Harpur spent most of his time moving around Singleton, Jerry's Plains and Patrick's Plains. According to @lissarrague_salvage_2006 [p. 13], this was a bilingual zone. Towards the east, the Wonnarua and Geawagal spoke a variety of the HRLM, Wulatji's tongue. Towards the west, the people spoke another language, and the available sources are unclear what it was. Lissarrague suspects it was either Gamilaraay or Darkinyung. Since Darkinyung is the most likely candidate for Harpur's language of the "Hawksbury mountains", his language of the "Hunter" is more likely to be Gamilaraay. This is broadly consistent with @fig-harpur-lang, which shows that there is a compelling Darkinyung, HRLM, or Gamilaraay equivalent for nine of Harpur's `r nrow(harpur)` Indigenous words (marked in bold). It is of course quite probable that Harpur learned the words "wallaroo," "gooburra" and "warragl" simply by learning English: these words quickly passed into Australian English from Wiradjuri and  Darug (also called the 'Sydney Language') after settlement [@dixon_aboriginal_2006]. The real problem words are "Euroka," "bidawong" and "teleltella."
+
+The origin of "teleltella" is most obscure. Wafer (personal communication) suggests that *dilbanyi*, a word in the Sydney Language, could be a possible source. Gamilaraay *banbandhuluwi* has a promising number of syllables and the correct meaning, but the vowels and consonants differ considerably from Harpur's transcription. It is possible that this is a hitherto unattested Darkinyung or HRLM word: no word for "crested bellbird" appears in either dictionary.
+
+The other problem words, "bidawong" and "Euroka," are attested in Wiradjuri, a language spoken in regions bordering Darkinyung, HRLM and Gamilaraay. "Euroka" is also attested in Dhurga, the local language of the south coast where Harpur was living in the 1860s. The data suggest three hypotheses: (1) Harpur had Wiradjuri informants; (2) "bidawong" and/or "Euroka" were present in Darkinyung but are hitherto unattested; (3) Harpur inserted the word "Euroka" into the poem after he learned it from Dhurga speakers in the 1860s. Hypothesis (1) is least likely. Although there is no evidence to disprove that Harpur met a Wiradjuri person, there is also no evidence that he travelled extensively in Wiradjuri country, nor that he ever met a Wiradjuri traveller. Thus it seems that some mixture of hypotheses (2) and (3) is most likely.
+
+While the *facts* of the case are murky, the *poetics* are clear. In sharp distinction to Dunlop, Harpur presents each word as a particular word spoken by particular people in a particular place. "Jimbuc" and "whirring" are only the most obvious instances. Consider these lines from Part II, when Harpur describes the sunrise:
+
+>Uncovered no longer the forest dog prowls,\
+Though so bold in the dark;\
+And the kindyne<sup>f</sup> and bidawong<sup>g</sup> haste to their holes\
+In the spouts of yon old ironbark:\
+While on its one bare blasted limb\
+The gooburra<sup>h</sup> sits in the fog-wreath dim,\
+Glorying loud with a laughter-like glee\
+In the march of the dayspring’s victory [...] (h209-cf)
+
+In each footnote, Harpur identifies the word as "an Aboriginal name", emphasising the indefinite article in footnote *g*: "I say _an_ aboriginal name, because almost every tribe of Blacks has a different set of names for our indiginous animals." (h209-cf) His precision about language is linked to his precision about nature. He places each animal in its ecological niche: the dog's hunting patterns change in the daytime, the sugar glider and ring-tailed possum nest specifically in the "ironbark," and the kookaburra sits on a "bare" branch where it can see its prey. **Discuss points made by Dixon and Webby**
+
+Harpur's justification for using an Indigenous word is always the same: the Indigenous word more aptly captures the animal's qualities. He makes this point sarcastically in the case of the kookaburra, contrasting the word "gooburra" with "the tasteful and poetic sobriquet of the Laughing Jackass." He goes on to quote a "rude and vulgar" newspaper poem in which the kookaburra is called the "Settler's Clock." Only the beautiful word "gooburra" is consistent with the idealisation that is the "fundamental charm of all poetry." (h209-cf)
+
+## Linguistic representation and the conquest of space
+
+*Diversions of Purley*, Bentham etc. - need to think back into a different intellectual culture
+
+## Conclusion: Agonies
+
+Agonies of form. Agonies of colonisation.
+
+## Acknowledgements
+
+I am grateful to Jim Wafer and Grace Karskens for sharing their notes on Harpur's *Kangaroo Hunt*.

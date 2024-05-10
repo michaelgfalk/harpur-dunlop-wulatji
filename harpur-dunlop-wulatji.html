@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.4.553">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -21,41 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
 }
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
 }
-</style>
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="harpur-dunlop-wulatji_files/libs/clipboard/clipboard.min.js"></script>
@@ -91,12 +77,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div class="quarto-title-meta-contents">
     <p class="author"><a href="https://findanexpert.unimelb.edu.au/profile/1043380-michael-falk">Michael Falk</a> <a href="https://orcid.org/0000-0001-9261-8390" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
   </div>
-    <div class="quarto-title-meta-contents">
+  <div class="quarto-title-meta-contents">
         <p class="affiliation">
             University of Melbourne
           </p>
       </div>
-    </div>
+  </div>
 
 <div class="quarto-title-meta">
 
@@ -106,33 +92,240 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
   
 
+
 </header>
 
-<div id="fig-harpur-lang" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>harpur <span class="ot">&lt;-</span> readxl<span class="sc">::</span><span class="fu">read_xlsx</span>(<span class="st">"harpur-lang.xlsx"</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(harpur)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="fig-harpur-lang" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<table class="table">
+
+<p>To occupy Australia, its European invaders had to name it. This was not merely a matter of naming places, though that of course was crucial. They also needed to name the things the made the places. They needed to name the trees that dropped their autumn bark, the deer-like creatures that hopped on two legs, the fires that ripped through crackling scrubland. They needed to name the fickle weather, the whirling dust, the intermittent streams. They needed to name hundreds of parrots and pigeons and snakes and dragons. They needed to name the people from whom they took the land. To conquer Australia, they ‘conquered space’. With a touch of the namer’s wand, they changed a strange land ‘into a familiar world of routes and places’ <span class="citation" data-cites="tuan_space_1977">(<a href="#ref-tuan_space_1977" role="doc-biblioref">Tuan 1977, 83</a>)</span>.</p>
+<p>The invaders mined Indigenous languages for names. Indigenous names had the advantage of establishment. The Indigenous name is the ‘real and proper’ name, thought Lachlan Macquarie <span class="citation" data-cites="carter_road_2010">(quoted in <a href="#ref-carter_road_2010" role="doc-biblioref">Carter 2010, 328</a>)</span>. But the reality and propriety of the Europeans was not the reality and propriety of the peoples they expropriated. When they took words, they took them. In East Africa, they took the affection of people meeting in the street—<em>Mambo?</em> (What’s up?), <em>Jambo!</em> (No problems!)—and turned it into “mumbo-jumbo.” In Australia, they debased words such as <em>gin</em> and <em>lubra</em>, while mixing myriad other words from myriad tongues into the new Australian English.</p>
+<p>In the 1840s, two invader poets observed this situation, and attempted to rectify it. The poets were Eliza Hamilton Dunlop and Charles Harpur. Both poets incorporated Indigenous vocabulary into their poems in a deliberate and ostensibly humanitarian way. While many scholars have observed that Dunlop and Harpur use Indigenous words in their English verse, this is the first study of which words they used, why they used them, and what languages they came from.</p>
+<p>Eliza Hamilton Dunlop (<strong>DATES</strong>) was the Irish wife of the Protector of Aborigines in Wollombi (see <a href="#fig-map" class="quarto-xref">Figure&nbsp;1</a>). She befriended a local poet, Wulatji, learned his tongue, and published a transcription and translation of his poetry in the <em>Sydney Morning Herald</em> <span class="citation" data-cites="wulatji_native_1848">(<a href="#ref-wulatji_native_1848" role="doc-biblioref">Wulatji 1848</a>)</span>.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Twenty-first century critics have praised the ‘sympathy’ of Dunlop’s translation, while noting its ‘colonialism’ and ‘cultural appropriation’ by more recent standards <span class="citation" data-cites="oleary_giving_2004">(<a href="#ref-oleary_giving_2004" role="doc-biblioref">O’Leary 2004</a>)</span>. <span class="citation" data-cites="wafer_ghost-writing_2017">Wafer (<a href="#ref-wafer_ghost-writing_2017" role="doc-biblioref">2017</a>)</span> has verified the accuracy of her translation, and used it to reconstruct Wulatji’s song-writing practices. He also highlights a remarkable fact about Dunlop’s translation, which has hitherto escaped literary analysis: she translates many of Wulatji’s words by <em>other</em> Indigenous words, often from far-flung languages.</p>
+<p>Charles Harpur was a currency lad, born to convict parents on the banks of Deerubbin (the Hawkesbury; see <a href="#fig-map" class="quarto-xref">Figure&nbsp;1</a>). His poetry is voluminous and varied, but the violence of the frontier, the ignorance of the settler, and the brutality of empire are key themes in many of his poems. He has been judged complicit in the imaginative expropriation of Aboriginal lands <span class="citation" data-cites="van_toorn_terrors_1992">(<a href="#ref-van_toorn_terrors_1992" role="doc-biblioref">Van Toorn 1992</a>)</span>, and many of his poems do indeed figure Australia as an <em>terra nullius</em> ripe for settlement. In <em>The Kangaroo Hunt</em> (1843-1867), Harpur reckons with his own contradictory impulses. He acknowledges Indigenous Australians as the ‘former lords of the soil’, and includes 12 Indigenous words in the text of the poem. In a series of footnotes, he localises the words to particular Indigenous groups, and argues for the appropriateness of Indigenous words to poetry. The poem has a complex textual history—as do nearly all Harpur’s poems <span class="citation" data-cites="eggert_charles_2016">(<a href="#ref-eggert_charles_2016" role="doc-biblioref">Eggert 2016</a>)</span>. The earliest evidence for the poem is an excerpt published in the <em>Weekly Register</em> in 1843 <span class="citation" data-cites="harpur_australian_1843">(<a href="#ref-harpur_australian_1843" role="doc-biblioref">Harpur 1843</a>)</span>. At that time, Harpur was living in the Hunter Valley, around Singleton. All the surviving complete versions of the poem, however, date to the 1860s, when Harpur was living far to the south in Eurobodalla. Although Harpur revised the poem considerably, <em>The Kangaroo Hunt</em> retains is character as poem of the 1840s, extolling the beauties of the “loud Nepean,” “old Hawkesbury” and “rapid Hunter” rivers where Harpur spent his youth and early adulthood <span class="citation" data-cites="harpur_charles_2019">(<a href="#ref-harpur_charles_2019" role="doc-biblioref">Harpur 2019, h209–bf</a>)</span>.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> It is nonetheless difficult to pin down the poem’s Indigenous vocabulary, given its complex textual history and the fragmentary evidence of Harpur’s own biography</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-map" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="harpur-dunlop-wulatji_files/figure-html/fig-map-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Deerubbin and the Hunter in the 1840s
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>My comparison of Harpur and Dunlop has two aims. The first aim is to contrast the Dunlop’s and Harpur’s poetics: I argue that Dunlop is a <em>universalist</em>, while Harpur is a <em>particularist</em>. The second aim is to clarify the problem of <em>linguistic representation</em>—or more verbosely, the <em>literary representation of Indigenous languages</em>.</p>
+<p>Both Dunlop and Harpur represent Indigenous language for humanitarian ends. Dunlop attempts to demonstrate the universality of the poetic impulse by transcribing and translating a sample of Awabakal poetry. Her ‘sentimental’ politics relies on the universality of human impulse to justify the universality of human rights (<strong>REFS</strong>). Harpur attempts to do justice to Indigenous ecopoetics by drawing a link between the euphony of particular Indigenous words and the ecological knowledge of particular Indigenous people. Dunlop’s universalism and Harpur’s particularism have both been subject to scholarly critique, but have never been compared. The comparison will throw significant features of their technique into relief, and reveal the variety of humanitarian poetry at a grisly moment in Australia’s colonial history.</p>
+<p>Dunlop and Harpur also raise the broader question of how to represent a language. Both Harpur and Dunlop wish to represent Indigenous languages as <em>poetic</em>, but they do so in different ways. Dunlop produces a <em>transcription</em>, <em>translation</em> and <em>glossary</em>; Harpur produces <em>words</em> and <em>philological footnotes</em> embedded in an original poem. These different forms of representation convey different ideas about the nature of Indigenous language. Dunlop presents Awabakal, Walatji’s language, as syntactic and literary. Harpur presents Darkinyung and Wiradjuri as verbal and oral. Despite these differences, Dunlop and Harpur draw on a similar stock of ideas about human language, rooted in the empiricist linguistics that then reigned in the English-speaking world <span class="citation" data-cites="aarsleff_study_1967">(<a href="#ref-aarsleff_study_1967" role="doc-biblioref">Aarsleff 1967</a>)</span>.</p>
+<p>My discussion falls into three sections. In the first two sections, I substantiate my claims about Dunlop’s universalism and Harpur’s particularism. In the third section, I contextualise their linguistic representations, explaining the relevant aspects of empiricist and utilitarian philosophy of language, and linking this to the conquest of space in colonial poetry. If there is an enduring value to these early works of colonial literature, it is in their vexed and self-referential character.</p>
+<section id="eliza-hamilton-dunlop-universalism" class="level2">
+<h2 class="anchored" data-anchor-id="eliza-hamilton-dunlop-universalism">Eliza Hamilton Dunlop: Universalism</h2>
+<p>Dunlop’s transcription Wulatji’s poetry is short enough to quote in full.</p>
+<blockquote class="blockquote">
+<p>Nung-Ngnun<br>
+Nge a runba wonung bulkirra umbilinto bulwarra;<br>
+Pital burra kultan wirripang bunto<br>
+<br>
+Nung-Ngnun<br>
+Nge a runba turrama berrambo, burra kilkoa:<br>
+Kurri wi, raratoa yella walliko,<br>
+Yulo Moane, woinya, birung poro bulliko,<br>
+<br>
+Nung-Ngnun<br>
+Nge a runba kan wullung, Makora, kokein,<br>
+Mip-pa-rai, kekul, wimbi murr ring kirrika:<br>
+Nge a runba mura ke-en kulbun kulbun murrung. <span class="citation" data-cites="wulatji_native_1848">(<a href="#ref-wulatji_native_1848" role="doc-biblioref">Wulatji 1848</a>)</span></p>
+</blockquote>
+<p>It is difficult to say what precisely this is a transcription <em>of</em>. <span class="citation" data-cites="oleary_giving_2004">O’Leary (<a href="#ref-oleary_giving_2004" role="doc-biblioref">2004, 92</a>)</span> argues from manuscript evidence that Dunlop fashioned a single poem from ‘three short songs’ by Wulatji. In a manuscript Dunlop composed, entitled “The Vase” <span class="citation" data-cites="wafer_ghost-writing_2017">Wafer (<a href="#ref-wafer_ghost-writing_2017" role="doc-biblioref">2017, 204</a>)</span> disagrees, arguing from metrical evidence that Wulatji’s poem should actually be seen as four ‘verses’ rather than three discrete songs. Dunlop’s published version supports O’Leary’s view. She separates her transcription into three discrete sections, each with the heading ‘Nung-Ngung’ (<em>nannguyn</em>, ‘song’). This suggests that each is a separate poem, but then the comma at the end of section two implies it is syntactically connected to section three. Is this a printer’s error, or was it intended by Dunlop? If this comma is intentional, then perhaps Wafer’s view is correct, and the eight lines of poetry should be understood as four couplets. But then why split the poetry into those three sections?</p>
+<p>Given the lack of context, the point is undecidable. There is no record of Dunlop and Wulatji’s conversations. Did Wulatji produce one or more discrete texts at Dunlop’s request, knowing they might be published? Did he produce a series of verse-examples to try and teach her about Awabakal versification? Did he improvise a performance to impress her?<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> Dunlop preserves this ambiguity in her transcription and translation. Her title, ‘Native Poetry’, does not specify how many poems she transcribes. When she adapted her translation into an original song for Isaac Nathan, she used a similarly ambiguous title, ‘Pialla Wollombi’, which she glosses as ‘the poetry or language of Wollombi’ <span class="citation" data-cites="dunlop_pialla_1848">(<a href="#ref-dunlop_pialla_1848" role="doc-biblioref">Dunlop and Wulatji 1848</a>)</span>. All this is to suggest that Dunlop does not transcribe a text, but transcribes a corpus. She provides the reader a sample of Wulatji’s poetry (one poem? three poems? four?), and shapes it into a single translation for readerly consumption.</p>
+<p>She confers unity on the text even in the transcription. If Wafer is correct, and Dunlop has spliced three verses into two, she has done so to good purpose: in her transcription, each verse begins with the possessive ‘Nge a runba’ (<em>ngayaranpa</em>, ‘our’), which is also repeated in the final line as a neat example of ‘terminal modification’ <span class="citation" data-cites="smith_poetic_1968">(<a href="#ref-smith_poetic_1968" role="doc-biblioref">Smith 1968, 53</a>)</span>. Dunlop partially replicates the anaphora on <em>ngayaranpa</em> in her translation, beginning each stanza with ‘our’ or ‘ours’. For whatever reason, she chooses <em>not</em> to repeat the word at the end of the poem, as Wulatji does:</p>
+<blockquote class="blockquote">
+<p>Our home is the gibber-gunyah,<br>
+Where hill joins hill on high;<br>
+Where the turruma and berrambo,<br>
+Like sleeping serpents lie;<br>
+And the rushing of wings, as the wangas pass,<br>
+Sweeps the wallaby’s print from the glistening grass.<br>
+<br>
+Ours are the makoro gliding,<br>
+Deep in the shady pool;<br>
+For our spear is sure, and the prey secure…<br>
+Kanin, or the bright gherool.<br>
+Our lubras sleep by the bato clear,<br>
+That the Amygest’s track hath never been near.<br>
+<br>
+Ours is the koolema flowing<br>
+With precious kirrika stored;<br>
+For fleet the foot, and keen the eye,<br>
+That seeks the nukkung’s hoard;<br>
+And the glances are bright, and the footsteps are free,<br>
+When we dance in the shade of the karakon tree.</p>
+</blockquote>
+<div class="cell">
+<div id="fig-dunlop-lang" class="cell-output-display quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dunlop-lang-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table table-sm table-striped small">
 <colgroup>
-<col style="width: 2%">
-<col style="width: 46%">
-<col style="width: 18%">
-<col style="width: 6%">
-<col style="width: 6%">
-<col style="width: 11%">
+<col style="width: 10%">
+<col style="width: 7%">
+<col style="width: 9%">
+<col style="width: 35%">
+<col style="width: 36%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Dunlop’s translation</th>
+<th style="text-align: left;">Wulatji’s text</th>
+<th style="text-align: left;">Dunlop’s definition</th>
+<th style="text-align: left;">HRLM equivalents</th>
+<th style="text-align: left;">Other equivalents</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">gibber-gunyah</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Cave in the rock</td>
+<td style="text-align: left;">kuyung ~ kuyang <em>camp, camp fire; also town</em></td>
+<td style="text-align: left;">giba <em>stone or rock</em>, gunya <em>hut</em> (Sydney)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">turruma</td>
+<td style="text-align: left;">turrama</td>
+<td style="text-align: left;">War arms</td>
+<td style="text-align: left;">TaRama <em>war boomerang</em></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">berrambo</td>
+<td style="text-align: left;">berrambo</td>
+<td style="text-align: left;">War arms</td>
+<td style="text-align: left;">pirampu <em>waddy; club (Wafer)</em></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">wanga</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">A species of pigeon</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">wungawunga <em>Wonga pigeon</em> (Sydney); wangawanga <em>Wonga pigeon</em> (Darkinyung)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">wallaby</td>
+<td style="text-align: left;">buntoa</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">walapi ~ walapay <em>wallaby</em>; paNTarr <em>kangaroo</em></td>
+<td style="text-align: left;">wulaba <em>rock wallaby</em> (Sydney)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">makoro</td>
+<td style="text-align: left;">Makoro</td>
+<td style="text-align: left;">Fish</td>
+<td style="text-align: left;">makurr <em>fish</em></td>
+<td style="text-align: left;">magura <em>fish</em> (Sydney)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">kanim</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Eel</td>
+<td style="text-align: left;">kaNiyn ~ KaNang <em>freshwater eel</em></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">gherool</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Mullet</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">djirul <em>mullet</em> (Darkinyung)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">lubra</td>
+<td style="text-align: left;">mura ke-en</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">marr[a]kiyn <em>young maiden, woman, girl</em></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">bato</td>
+<td style="text-align: left;">kokein</td>
+<td style="text-align: left;">Water</td>
+<td style="text-align: left;">paTu, kukuyn <em>fresh water</em></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Amygest</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">White fellow</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">koolema</td>
+<td style="text-align: left;">wimbi</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">wimpi <em>vessel made from the knots of trees and used as baskets or bowls</em></td>
+<td style="text-align: left;">guliman <em>coolamon</em> (Gamilaraay)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">kirrika</td>
+<td style="text-align: left;">kirrika</td>
+<td style="text-align: left;">Honey</td>
+<td style="text-align: left;">kiR[i]ka <em>white honey</em></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">nukkung</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Wild bee</td>
+<td style="text-align: left;">Nakang <em>native bee</em></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">karakun</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Oak Tree</td>
+<td style="text-align: left;">karakaNpa <em>place of swamp-oaks</em></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dunlop-lang-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Indigenous Vocabulary in Dunlop’s translation of Wulatji
+</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="charles-harpur-particularism" class="level2">
+<h2 class="anchored" data-anchor-id="charles-harpur-particularism">Charles Harpur: Particularism</h2>
+<p>Harpur’s poem is on a grander scale than Dunlop’s. <em>The Kangaroo Hunt, or A Morning in the Mountains: A Descriptive Poem in Six Parts: By Charles Harpur. An Australian</em> is a long and ambitious work that has been described as “Australia’s first epic poem” <span class="citation" data-cites="gelder_colonial_2020">(<a href="#ref-gelder_colonial_2020" role="doc-biblioref">Gelder and Weaver 2020</a>, p.&nbsp;REF)</span>. It describes an “idealised” kangaroo hunt that lasts from sunrise to sunset. As the youthful party of white hunters harry the kangaroo, Harpur describes the sights and sounds of the Australian bush, expanding on the verse in detailed footnotes. The poem pulls in two directions. In one direction, Harpur seeks to “idealise” the hunt, blending the details of many possible hunts into “one Eden-piece embathed with a luminous atmosphere of sentiment” (h209-af). In another direction, Harpur seeks to capture specific details of land and language, to capture the particular qualities of each bird, tree, geological feature—or Indigenous word.</p>
+<p>Harpur uses 12 Indigenous words in either the body of the poem or its footnotes (<a href="#fig-harpur-lang" class="quarto-xref">Figure&nbsp;3</a>).<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> Generally speaking, Harpur’s transcriptions are sound, and it is not difficult to look up the words in a modern dictionary. It is nonetheless difficult to identify the languages of Harpur’s poem due to three problems The first problem is space: Harpur does not name his informants, or describe precisely where he encountered them. The only geographic detail he provides is in his footnote on the words “jimbuck” and “whirring”, which I discuss below. The second problem is time: Harpur began the poem in the 1840s, while living on the Hunter, and completed it decades later, while living in Eurobodalla. How much of the poem did he write in each region, and when did he learn or insert the Indigenous words? The <em>only</em> Indigenous word we can be certain Harpur inserted in the 1840s is “duaralli”, since this is the only Indigenous word in the published exctract of 1843 <span class="citation" data-cites="harpur_australian_1843">(<a href="#ref-harpur_australian_1843" role="doc-biblioref">Harpur 1843</a>)</span>. The third problem is linguistics: The languages of South-East Australia are all members of the Pama-Nyungan language family, and share many words. By the 1840s, many of these words had already entered Australian English. Today, many of these words have been lost due to colonisation. Despite these problems, it is possible to be reasonably confident about the broad patterns of Harpur’s Indigenous learning.</p>
+<div class="cell">
+<div id="fig-harpur-lang" class="cell-output-display quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-harpur-lang-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 4%">
+<col style="width: 40%">
 <col style="width: 8%">
+<col style="width: 9%">
+<col style="width: 14%">
+<col style="width: 6%">
+<col style="width: 14%">
 </colgroup>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Harpur’s word</th>
 <th style="text-align: left;">Harpur’s definition</th>
-<th style="text-align: left;">Probable referent</th>
-<th style="text-align: left;">Wiradjuri euqivalent (from app)</th>
-<th style="text-align: left;">HRLM equivalent (Lissarrague 2006)</th>
-<th style="text-align: left;">Gamilaraay equivalent (Ash, Giacon and Lissarrague 2003)</th>
-<th style="text-align: left;">Darkingyung Equivalent (Jones 2008)</th>
+<th style="text-align: left;">Referent</th>
+<th style="text-align: left;">Darkinyung</th>
+<th style="text-align: left;">HRLM</th>
+<th style="text-align: left;">Gamilaraay</th>
+<th style="text-align: left;">Other</th>
 </tr>
 </thead>
 <tbody>
@@ -140,120 +333,215 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Euroka</td>
 <td style="text-align: left;">‘an aboriginal name of the sun’</td>
 <td style="text-align: left;">The sun</td>
-<td style="text-align: left;"><em>sun</em> yurraga</td>
-<td style="text-align: left;">sun panyal</td>
-<td style="text-align: left;">sun yaraay</td>
-<td style="text-align: left;">sun banal</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">panyal</td>
+<td style="text-align: left;">yaraay</td>
+<td style="text-align: left;">yurraga (Wiradjuri); yuraga (Dhurga)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">bidawong</td>
 <td style="text-align: left;">‘flying squirrel’</td>
 <td style="text-align: left;">Sugar glider</td>
-<td style="text-align: left;">sugar glider budha-rang</td>
-<td style="text-align: left;">flying possum pitjang</td>
-<td style="text-align: left;">gliding possum bagu</td>
-<td style="text-align: left;">flying squirrel banguu</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">pitjang</td>
+<td style="text-align: left;">bagu</td>
+<td style="text-align: left;">budha-rang (Wiradjuri)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">kindyne</td>
 <td style="text-align: left;">‘ring-tailed possum’</td>
 <td style="text-align: left;">Ring-tailed possum</td>
-<td style="text-align: left;">ring-tailed possum gindhaany</td>
-<td style="text-align: left;">possum wilay</td>
-<td style="text-align: left;">ring-tailed possum garrawirr</td>
-<td style="text-align: left;">ring-tail possum gindang</td>
+<td style="text-align: left;"><strong>gindang</strong></td>
+<td style="text-align: left;">wilay <em>possum</em></td>
+<td style="text-align: left;">garrawir</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">gooburra</td>
 <td style="text-align: left;">‘the large kind of king-fisher which is commonly known by the tasteful and poetic sobriquet of the Laughing Jackass’</td>
-<td style="text-align: left;">Kookaburra</td>
-<td style="text-align: left;">kookaburra gugubarra</td>
-<td style="text-align: left;">kookaburra kukaparr</td>
-<td style="text-align: left;">kookaburra gugurrgaagaa</td>
-<td style="text-align: left;">kookaburra gugandi</td>
+<td style="text-align: left;">kookaburra</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>kukaparr</strong></td>
+<td style="text-align: left;"><strong>gugurrgaagaa</strong></td>
+<td style="text-align: left;">gugubarra (Wiradjuri)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">teleltella</td>
 <td style="text-align: left;">‘a large and solitary kind of bell-bird’</td>
-<td style="text-align: left;">?Crested bellbird</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;">crested bell-bird gangandhuluwi</td>
-<td style="text-align: left;">NA</td>
+<td style="text-align: left;">crested bellbird</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">banbandhuluwi</td>
+<td style="text-align: left;">dilbanyi <em>ring–to ring as a bell</em> (Sydney)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">warragl</td>
 <td style="text-align: left;">‘an aboriginal name of the native dog’</td>
-<td style="text-align: left;">A wild dog, a dingo.</td>
-<td style="text-align: left;">wild dog warragul [also Sydney]</td>
-<td style="text-align: left;">dog waRikal</td>
-<td style="text-align: left;">dingo mayn</td>
-<td style="text-align: left;">dog, wild dog miri</td>
+<td style="text-align: left;">wild dog</td>
+<td style="text-align: left;">miri <em>dog, wild dog</em></td>
+<td style="text-align: left;"><strong>waRikal</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">wuragal (Sydney)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">yerowala</td>
-<td style="text-align: left;">‘blue-mountain parrot’; ‘Their pinions washed with verdant gold’; ‘… the lustrous green of the whole back and wings, the bright yellow of the breast, and the indescribable blue of the head, do indeed compose for it an array most royal.’</td>
-<td style="text-align: left;">Rainbow lorikeet (‘blue mountain parrot’) or turquoise parrot (‘bright yellow of the breast’)</td>
-<td style="text-align: left;">Australian ringneck wiragala</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;">parrot wagarala</td>
+<td style="text-align: left;">‘blue-mountain parrot’</td>
+<td style="text-align: left;">rainbow lorikeet</td>
+<td style="text-align: left;"><strong>wagarala</strong> <em>parrot</em></td>
+<td style="text-align: left;">wakalarr ~ wakilarr <em>red parrot; rosella</em></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">wiragala <em>australian ringneck</em></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">duaralli</td>
-<td style="text-align: left;">‘the kangaroo-rat’</td>
+<td style="text-align: left;">the kangaroo-rat’; attributed to ‘the blacks of the Hunter’ in 1843, but to ‘blacks of the interior’ in 1867 (h209-df)</td>
 <td style="text-align: left;">eastern bettong</td>
-<td style="text-align: left;">eastern bettong dirru</td>
-<td style="text-align: left;">kangaroo rat</td>
-<td style="text-align: left;">kangaroo rat dhurrawaay</td>
-<td style="text-align: left;">kangaroo-rat dhurawayi</td>
+<td style="text-align: left;">dhurawayi</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>dhurrawaay</strong></td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">maroo</td>
 <td style="text-align: left;">‘a sort of brush iron-wood’</td>
 <td style="text-align: left;">?grey box</td>
-<td style="text-align: left;">grey box murrung</td>
-<td style="text-align: left;">thorny bush maru</td>
-<td style="text-align: left;">Acacia farnesiana mawurr</td>
-<td style="text-align: left;">NA</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>maru</strong> <em>thorny bush</em></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">wallaroo</td>
-<td style="text-align: left;">‘wallaroo’; ‘a species of kangaroo which is peculiar to the higher and more difficult mountains’; ‘the male … [is] almost black, and the female … [is] a sort of cream color’</td>
-<td style="text-align: left;">*Swamp wallaby</td>
-<td style="text-align: left;">wallaroo walarru</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;">wallaroo yulama</td>
-<td style="text-align: left;">black kangaroo walaru [wallaroo wambuyn]</td>
+<td style="text-align: left;">‘wallaroo’; ‘the male … [is] almost black, and the female … [is] a sort of cream color’</td>
+<td style="text-align: left;">eastern wallaroo</td>
+<td style="text-align: left;"><strong>walaru</strong> <em>black kangaroo</em></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">yulama</td>
+<td style="text-align: left;">wularu (Sydney)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">jimbuck</td>
-<td style="text-align: left;">‘a little shag-haired species of kangaroo’ [metaphorically, sheep]</td>
-<td style="text-align: left;">Brush-tailed rock wallaby</td>
-<td style="text-align: left;">sheep dyumbag</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;">NA</td>
+<td style="text-align: left;">‘a little shag-haired species of kangaroo’; metaphorically, ‘sheep’</td>
+<td style="text-align: left;">brush-tailed rock wallaby</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>dhimba</strong> <em>sheep</em></td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">whirring</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;">brush-tailed rock wallaby wirrang</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;">wallaby wan-guy</td>
-<td style="text-align: left;">rock wallaby wirayn</td>
+<td style="text-align: left;">name for ‘jimbuck’ among the people of ‘the Hawksbury mountains’</td>
+<td style="text-align: left;">brush-tailed rock wallaby</td>
+<td style="text-align: left;"><strong>wirayn</strong></td>
+<td style="text-align: left;">wayiring <em>wallaby</em></td>
+<td style="text-align: left;">wan.guy</td>
+<td style="text-align: left;">wirrang</td>
 </tr>
 </tbody>
 </table>
-<figcaption class="figure-caption">(a) how are these labelled; like this? | Like this?</figcaption>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-harpur-lang-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Indigenous Vocabulary in <em>The Kangaroo Hunt</em>
+</figcaption>
 </figure>
 </div>
-<figcaption class="figure-caption">Figure&nbsp;1: Indigenous Vocabulary in <em>The Kangaroo Hunt</em></figcaption>
-</figure>
 </div>
+<p>Harpur does provide some help resolving these problems, in the final footnote of the poem:</p>
+<blockquote class="blockquote">
+<p>Jimbuc is an aboriginal name of little shag-haired species of kangaroo which is peculiar to mountain copses. It may be called the mountain wallaby, being in relation to the wallaroo what the common wallaby is to the kangaroo proper. The jimbuc is the least elegant in its form, and the dullest in its nature, of all the kangaroo kinds—of all such at least as I happen to be acquainted with. The Blacks of the Hunter call the sheep jimbuc, no doubt from a resemblance, however remote, arising out of the hairy shagginess of the one and the woolliness of the other. But this, like most other of our indigenous animals, is named variously by the aboriginal tribes of different localities: and is (or was) known amongst the Hawksbury mountains by the native name of <em>whirring</em>. (h209-gf)</p>
+</blockquote>
+<p>If Harpur is correct, then an old etymological problem has found its solution. Today, <em>jumbuck</em> is a cherished Australian slang word for sheep, immortalised in the popular song <em>Waltzing Matilda</em>. <span class="citation" data-cites="dixon_aboriginal_2006">Dixon et al. (<a href="#ref-dixon_aboriginal_2006" role="doc-biblioref">2006, 56</a>)</span> suggest that the word may derive from English <em>jump</em>, or perhaps from the Gamilaraay word <em>dhimba</em>, but admit that neither hypothesis can be ‘confirmed’. Harpur’s footnote provides concerete support for the hypothesis that <em>jumbuck</em> derives from Gamilaraay <em>dhimba</em>. The hypothesis gains strength given the specificity of Harpur’s description: Harpur insists that the word referred specifically to the ‘mountain wallaby’, which from his description is clearly the brush-tailed rock wallaby (<em>Petrogale penicillata</em>). The compilers of the modern <em>Gamilaraay-Yuwalaraay-Yuwaalayaay</em> dictionary were unable to find a word specifically for the brush-tailed-rock wallaby, and record the word <em>dhimba</em> solely in its meaning of <em>sheep</em> <span class="citation" data-cites="lissarrague_gamilaraay_2003">(<a href="#ref-lissarrague_gamilaraay_2003" role="doc-biblioref">Lissarrague, Ash, and Giacon 2003, 62</a>)</span>. If we can trust Harpur’s testimony on this point, then the old riddle of <em>jumbuck</em> is solved, and an new entry may be made in an essential document of a reviving language.</p>
+<p>Harpur’s testimony also allows us to identify more clearly who are the people of the “Hawksbury mountains” and the “Hunter.” By the “Hawksbury mountains,” Harpur presumably refers to the rocky highlands to the north of the Hawkesbury River (Deerubbin), near where he grew up. If this is so, then the language he would most likely encounter in that region is Darkinyung. The first road between Sydney and the Hunter Valley ran through this region Harpur calls the “Hawksbury mountains,” so Harpur is likely to have traversed the region numerous times when moving between the Hunter, the Hawkesbury and Sydney.</p>
+<p>The case for “the Blacks of the Hunter” is more difficult. In the 1840s and 50s, Harpur spent most of his time moving around Singleton, Jerry’s Plains and Patrick’s Plains. According to <span class="citation" data-cites="lissarrague_salvage_2006">Lissarrague (<a href="#ref-lissarrague_salvage_2006" role="doc-biblioref">2006, 13</a>)</span>, this was a bilingual zone. Towards the east, the Wonnarua and Geawagal spoke a variety of the HRLM, Wulatji’s tongue. Towards the west, the people spoke another language, and the available sources are unclear what it was. Lissarrague suspects it was either Gamilaraay or Darkinyung. Since Darkinyung is the most likely candidate for Harpur’s language of the “Hawksbury mountains”, his language of the “Hunter” is more likely to be Gamilaraay. This is broadly consistent with <a href="#fig-harpur-lang" class="quarto-xref">Figure&nbsp;3</a>, which shows that there is a compelling Darkinyung, HRLM, or Gamilaraay equivalent for nine of Harpur’s 12 Indigenous words (marked in bold). It is of course quite probable that Harpur learned the words “wallaroo,” “gooburra” and “warragl” simply by learning English: these words quickly passed into Australian English from Wiradjuri and Darug (also called the ‘Sydney Language’) after settlement <span class="citation" data-cites="dixon_aboriginal_2006">(<a href="#ref-dixon_aboriginal_2006" role="doc-biblioref">Dixon et al. 2006</a>)</span>. The real problem words are “Euroka,” “bidawong” and “teleltella.”</p>
+<p>The origin of “teleltella” is most obscure. Wafer (personal communication) suggests that <em>dilbanyi</em>, a word in the Sydney Language, could be a possible source. Gamilaraay <em>banbandhuluwi</em> has a promising number of syllables and the correct meaning, but the vowels and consonants differ considerably from Harpur’s transcription. It is possible that this is a hitherto unattested Darkinyung or HRLM word: no word for “crested bellbird” appears in either dictionary.</p>
+<p>The other problem words, “bidawong” and “Euroka,” are attested in Wiradjuri, a language spoken in regions bordering Darkinyung, HRLM and Gamilaraay. “Euroka” is also attested in Dhurga, the local language of the south coast where Harpur was living in the 1860s. The data suggest three hypotheses: (1) Harpur had Wiradjuri informants; (2) “bidawong” and/or “Euroka” were present in Darkinyung but are hitherto unattested; (3) Harpur inserted the word “Euroka” into the poem after he learned it from Dhurga speakers in the 1860s. Hypothesis (1) is least likely. Although there is no evidence to disprove that Harpur met a Wiradjuri person, there is also no evidence that he travelled extensively in Wiradjuri country, nor that he ever met a Wiradjuri traveller. Thus it seems that some mixture of hypotheses (2) and (3) is most likely.</p>
+<p>While the <em>facts</em> of the case are murky, the <em>poetics</em> are clear. In sharp distinction to Dunlop, Harpur presents each word as a particular word spoken by particular people in a particular place. “Jimbuc” and “whirring” are only the most obvious instances. Consider these lines from Part II, when Harpur describes the sunrise:</p>
+<blockquote class="blockquote">
+<p>Uncovered no longer the forest dog prowls,<br>
+Though so bold in the dark;<br>
+And the kindyne<sup>f</sup> and bidawong<sup>g</sup> haste to their holes<br>
+In the spouts of yon old ironbark:<br>
+While on its one bare blasted limb<br>
+The gooburra<sup>h</sup> sits in the fog-wreath dim,<br>
+Glorying loud with a laughter-like glee<br>
+In the march of the dayspring’s victory […] (h209-cf)</p>
+</blockquote>
+<p>In each footnote, Harpur identifies the word as “an Aboriginal name”, emphasising the indefinite article in footnote <em>g</em>: “I say <em>an</em> aboriginal name, because almost every tribe of Blacks has a different set of names for our indiginous animals.” (h209-cf) His precision about language is linked to his precision about nature. He places each animal in its ecological niche: the dog’s hunting patterns change in the daytime, the sugar glider and ring-tailed possum nest specifically in the “ironbark,” and the kookaburra sits on a “bare” branch where it can see its prey. <strong>Discuss points made by Dixon and Webby</strong></p>
+<p>Harpur’s justification for using an Indigenous word is always the same: the Indigenous word more aptly captures the animal’s qualities. He makes this point sarcastically in the case of the kookaburra, contrasting the word “gooburra” with “the tasteful and poetic sobriquet of the Laughing Jackass.” He goes on to quote a “rude and vulgar” newspaper poem in which the kookaburra is called the “Settler’s Clock.” Only the beautiful word “gooburra” is consistent with the idealisation that is the “fundamental charm of all poetry.” (h209-cf)</p>
+</section>
+<section id="linguistic-representation-and-the-conquest-of-space" class="level2">
+<h2 class="anchored" data-anchor-id="linguistic-representation-and-the-conquest-of-space">Linguistic representation and the conquest of space</h2>
+<p><em>Diversions of Purley</em>, Bentham etc. - need to think back into a different intellectual culture</p>
+</section>
+<section id="conclusion-agonies" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion-agonies">Conclusion: Agonies</h2>
+<p>Agonies of form. Agonies of colonisation.</p>
+</section>
+<section id="acknowledgements" class="level2">
+<h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
+<p>I am grateful to Jim Wafer and Grace Karskens for sharing their notes on Harpur’s <em>Kangaroo Hunt</em>.</p>
 
-</main>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-aarsleff_study_1967" class="csl-entry" role="listitem">
+Aarsleff, Hans. 1967. <em>The <span>Study</span> of <span>Language</span> in <span>England</span>, 1780-1860</em>. Princeton: Princeton University Press.
+</div>
+<div id="ref-carter_road_2010" class="csl-entry" role="listitem">
+Carter, Paul. 2010. <em>The Road to <span>Botany</span> <span>Bay</span>: An Exploration of Landscape and History</em>. Minneapolis: University of Minnesota Press.
+</div>
+<div id="ref-dixon_aboriginal_2006" class="csl-entry" role="listitem">
+Dixon, Robert, Bruce Moore, W. S. Ramson, and Mandy Thomas. 2006. <em>Aboriginal <span>Australian</span> <span>Words</span> in <span>English</span>: <span>The</span> <span>Origin</span> and <span>Meaning</span></em>. Second. Oxford: Oxford University Press.
+</div>
+<div id="ref-dunlop_pialla_1848" class="csl-entry" role="listitem">
+Dunlop, Eliza Hamilton, and Wulatji. 1848. <span>“Pialla <span>Wollombi</span>.”</span> In <em>The <span>Southern</span> <span>Euphrosyne</span> and <span>Australian</span> <span>Miscellany</span>: Containing Oriental Moral Takes, Original Anecdote, Poetry and Music</em>, 94. London; Sydney: Whittaker &amp; Co. <a href="http://nla.gov.au/nla.obj-166023361">http://nla.gov.au/nla.obj-166023361</a>.
+</div>
+<div id="ref-eggert_charles_2016" class="csl-entry" role="listitem">
+Eggert, Paul. 2016. <span>“Charles <span>Harpur</span>: <span>The</span> <span>Editorial</span> <span>Nightmare</span>.”</span> <em>JASAL</em> 16 (2): 1–14. <a href="https://openjournals.library.sydney.edu.au/JASAL/article/view/11011">https://openjournals.library.sydney.edu.au/JASAL/article/view/11011</a>.
+</div>
+<div id="ref-gelder_colonial_2020" class="csl-entry" role="listitem">
+Gelder, Ken, and Rachael Weaver. 2020. <em>The <span>Colonial</span> <span>Kangaroo</span> <span>Hunt</span></em>. Ebook. Melbourne: Melbourne University Publishing. <a href="http://ebookcentral.proquest.com/lib/unimelb/detail.action?docID=6130731">http://ebookcentral.proquest.com/lib/unimelb/detail.action?docID=6130731</a>.
+</div>
+<div id="ref-harpur_australian_1843" class="csl-entry" role="listitem">
+Harpur, Charles. 1843. <span>“Australian <span>Scenery</span> (<span>From</span> the "<span>Kangaroo</span> <span>Hunt</span>," an Unpublished Poem).”</span> <em>Weekly Register of Politics, Facts and General Literature</em>, November. <a href="http://nla.gov.au/nla.news-article228135900">http://nla.gov.au/nla.news-article228135900</a>.
+</div>
+<div id="ref-harpur_charles_2019" class="csl-entry" role="listitem">
+———. 2019. <em>Charles <span>Harpur</span> <span>Critical</span> <span>Archive</span></em>. Edited by Paul Eggert. Sydney: Sydney University Press. <a href="http://charles-harpur.org/">http://charles-harpur.org/</a>.
+</div>
+<div id="ref-lissarrague_salvage_2006" class="csl-entry" role="listitem">
+Lissarrague, Amanda. 2006. <em>A Salvage Grammar and Wordlist of the Language from the <span>Hunter</span> <span>River</span> and <span>Lake</span> <span>Macquarie</span></em>. Nambucca Heads, NSW: Muurrbay Aboriginal Language; Culture Cooperative.
+</div>
+<div id="ref-lissarrague_gamilaraay_2003" class="csl-entry" role="listitem">
+Lissarrague, Amanda, Anna Ash, and John Giacon, eds. 2003. <em>Gamilaraay, <span>Yuwaalaraay</span> &amp; <span>Yuwaalayaay</span> Dictionary</em>. Alice Springs, N.T: IAD Press.
+</div>
+<div id="ref-oleary_giving_2004" class="csl-entry" role="listitem">
+O’Leary, John. 2004. <span>“Giving the Indigenous a Voice — Further Thoughts on the Poetry of <span>Eliza</span> <span>Hamilton</span> <span>Dunlop</span>.”</span> <em>Journal of Australian Studies</em> 28 (82): 85–93. <a href="https://doi.org/10.1080/14443050409387958">https://doi.org/10.1080/14443050409387958</a>.
+</div>
+<div id="ref-smith_poetic_1968" class="csl-entry" role="listitem">
+Smith, Barbara Herrnstein. 1968. <em>Poetic <span>Closure</span>: <span>A</span> <span>Study</span> of <span>How</span> <span>Poems</span> <span>End</span></em>. Chicago; London: University of Chicago Press.
+</div>
+<div id="ref-tuan_space_1977" class="csl-entry" role="listitem">
+Tuan, Yi-Fu. 1977. <em>Space and <span>Place</span>: <span>The</span> <span>Perspective</span> of <span>Experience</span></em>. Minneapolis; London: University of Minnesota Press.
+</div>
+<div id="ref-van_toorn_terrors_1992" class="csl-entry" role="listitem">
+Van Toorn, Penny. 1992. <span>“The <span>Terrors</span> of <em><span>Terra</span> <span>Nullius</span></em>: <span>Gothicising</span> and <span>De</span>‐<span>Gothicising</span> Aboriginality.”</span> <em>World Literature Written in English</em> 32 (2): 87–97. <a href="https://doi.org/10.1080/17449859208589194">https://doi.org/10.1080/17449859208589194</a>.
+</div>
+<div id="ref-wafer_ghost-writing_2017" class="csl-entry" role="listitem">
+Wafer, Jim. 2017. <span>“Ghost-Writing for <span>Wulatji</span>: Incubation and Re-Dreaming as Song Revitalisation Practices.”</span> In <em>Recirculating <span>Songs</span>: <span>Revitalising</span> the Singing Practices of <span>Indigenous</span> <span>Australia</span></em>, 193–256. Newcastle: Hunter Press. <a href="https://openresearch-repository.anu.edu.au/bitstream/1885/132161/18/9_wafer.pdf">https://openresearch-repository.anu.edu.au/bitstream/1885/132161/18/9_wafer.pdf</a>.
+</div>
+<div id="ref-wulatji_native_1848" class="csl-entry" role="listitem">
+Wulatji. 1848. <span>“Native <span>Poetry</span>.”</span> Translated by Eliza Hamilton Dunlop. <em>The Sydney Morning Herald</em>, October. <a href="http://nla.gov.au/nla.news-article12904464">http://nla.gov.au/nla.news-article12904464</a>.
+</div>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>She later adapted the poem for Isaac Nathan’s song collection, <em>The Southern Euphrosyne</em> <span class="citation" data-cites="dunlop_pialla_1848">(<a href="#ref-dunlop_pialla_1848" role="doc-biblioref">Dunlop and Wulatji 1848</a>)</span>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Paul Eggert’s variorum edition of Harpur’s poetry provides an ‘h-number’ for each version of each poem. I refer to Harpur’s poems by h-number throughout. Each of <em>Kangaroo Hunt</em>’s six parts has its own h-number.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>According to Threlkeld, Wulatji was a popular guest, whose humourous ‘gibes’ and ‘song and dance’ routines were highly appreciated by Indigenous people throughout the region <span class="citation" data-cites="wafer_ghost-writing_2017">(quoted in <a href="#ref-wafer_ghost-writing_2017" role="doc-biblioref">Wafer 2017, 200</a>)</span>.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>I am indebted to Jim Wafer for sharing his notes on Harpur’s Indigenous vocabulary, which helped especially with the difficult <em>teleltella</em>.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -334,10 +622,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -347,8 +652,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -360,7 +674,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -404,6 +841,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -429,6 +867,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -489,6 +953,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 

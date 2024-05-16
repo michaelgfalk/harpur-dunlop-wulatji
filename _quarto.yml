@@ -1,2 +1,14 @@
 project:
-  title: "harpur-dunlop-wulatji"
+  type: manuscript
+manuscript:
+  article: harpur-dunlop-wulatji.qmd
+  code-links:
+    - text: Harpur Data
+      icon: file-spreadsheet
+      href: data/harpur-lang.xlsx
+    - text: Dunlop Data
+      icon: file-spreadsheet
+      href: data/dunlop-data.xlsx
+format:
+  html: default
+  docx: default

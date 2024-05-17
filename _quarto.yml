@@ -8,7 +8,15 @@ manuscript:
       href: data/harpur-lang.xlsx
     - text: Dunlop Data
       icon: file-spreadsheet
-      href: data/dunlop-data.xlsx
+      href: data/dunlop-lang.xlsx
+    - text: Topographic Data
+      icon: globe
+      href: https://pid.geoscience.gov.au/dataset/ga/60804
+    - text: Town geocoding script
+      icon: globe
+      href: scripts/geocode-towns.R
 format:
-  html: default
+  html:
+    smooth-scroll: true
   docx: default
+  jats: default

@@ -20,9 +20,9 @@ format:
     smooth-scroll: true
   docx: default
   jats: default
-  sagej-pdf:
-    classoption: [Crown,times,sageh]
-    # Allow more than 10 footnotes
-    header-includes: |
-      \usepackage[perpage]{footmisc}
+  # sagej-pdf:
+  #   classoption: [Crown,times,sageh]
+  #   # Allow more than 10 footnotes
+  #   header-includes: |
+  #     \usepackage[perpage]{footmisc}
 

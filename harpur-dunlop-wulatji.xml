@@ -89,15 +89,15 @@ philosophy of language; terra nullius</kwd>
   <title>1 Introduction</title>
   <p>To occupy Australia, its European invaders had to name it. This was
   not merely a matter of naming places, though that of course was
-  crucial. They also needed to name the things the made the places. They
-  needed to name the trees that dropped their autumn bark, the deer-like
-  creatures that hopped on two legs, the fires that ripped through
-  crackling scrubland. They needed to name the fickle weather, the
-  whirling dust, the intermittent streams. They needed to name hundreds
-  of parrots and pigeons and snakes and dragons. They needed to name the
-  people from whom they took the land. To conquer Australia, they
-  “conquered space.” With a touch of the namer’s wand, they changed a
-  strange land “into a familiar world of routes and places”
+  crucial. They also needed to name the things that made the places.
+  They needed to name the trees that dropped their autumn bark, the
+  deer-like creatures that hopped on two legs, the fires that ripped
+  through crackling scrubland. They needed to name the fickle weather,
+  the whirling dust, the intermittent streams. They needed to name
+  hundreds of parrots and pigeons and snakes and dragons. They needed to
+  name the people from whom they took the land. To conquer Australia,
+  they “conquered space.” With a touch of the namer’s wand, they changed
+  a strange land “into a familiar world of routes and places”
   (<xref alt="Tuan 1977, 83" rid="ref-tuan_space_1977" ref-type="bibr">Tuan
   1977, 83</xref>).</p>
   <p>The invaders mined Indigenous languages for names. Indigenous names
@@ -1346,6 +1346,7 @@ philosophy of language; terra nullius</kwd>
   2021, 113</xref>). They wrote vexed and contradictory poetry, whose
   vexation has lost none of its pertinence in the third century of
   Australia’s colonisation.</p>
+  <p>Wulatji, meanwhile, can speak for himself.</p>
 </sec>
 <sec id="acknowledgements">
   <title>6 Acknowledgements</title>
@@ -2201,15 +2202,15 @@ dunlop &lt;- file.path(DATA_DIR, &quot;dunlop-lang.xlsx&quot;) |&gt; readxl::rea
   <title>1 Introduction</title>
   <p>To occupy Australia, its European invaders had to name it. This was
   not merely a matter of naming places, though that of course was
-  crucial. They also needed to name the things the made the places. They
-  needed to name the trees that dropped their autumn bark, the deer-like
-  creatures that hopped on two legs, the fires that ripped through
-  crackling scrubland. They needed to name the fickle weather, the
-  whirling dust, the intermittent streams. They needed to name hundreds
-  of parrots and pigeons and snakes and dragons. They needed to name the
-  people from whom they took the land. To conquer Australia, they
-  “conquered space.” With a touch of the namer’s wand, they changed a
-  strange land “into a familiar world of routes and places”
+  crucial. They also needed to name the things that made the places.
+  They needed to name the trees that dropped their autumn bark, the
+  deer-like creatures that hopped on two legs, the fires that ripped
+  through crackling scrubland. They needed to name the fickle weather,
+  the whirling dust, the intermittent streams. They needed to name
+  hundreds of parrots and pigeons and snakes and dragons. They needed to
+  name the people from whom they took the land. To conquer Australia,
+  they “conquered space.” With a touch of the namer’s wand, they changed
+  a strange land “into a familiar world of routes and places”
   (<xref alt="Tuan 1977, 83" rid="ref-tuan_space_1977-nb-article" ref-type="bibr">Tuan
   1977, 83</xref>).</p>
   <p>The invaders mined Indigenous languages for names. Indigenous names
@@ -3530,6 +3531,7 @@ dbl (2): latitude, longitude
   2021, 113</xref>). They wrote vexed and contradictory poetry, whose
   vexation has lost none of its pertinence in the third century of
   Australia’s colonisation.</p>
+  <p>Wulatji, meanwhile, can speak for himself.</p>
 </sec>
 <sec id="acknowledgements-nb-article">
   <title>6 Acknowledgements</title>

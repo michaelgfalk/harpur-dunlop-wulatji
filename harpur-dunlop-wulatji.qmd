@@ -50,7 +50,7 @@ rivers <- sf::read_sf(file.path(DATA_DIR, "drainage")) |>
 
 river_names <- tibble::tribble(
   ~name, ~lon, ~lat,
-  "HUNTER RIVER", 151.35, -32.25,
+  "HUNTER RIVER", 151.35, -32.15,
   "DEERUBBIN", 150.8, -33.3
 )
 
@@ -60,7 +60,7 @@ language_names <- tibble::tribble(
   "Darkinyung", 150.82, -33.1, 0,
   "Wiradjuri", 150, -33, 80,
   "HRLM", 151.5, -32.75, 0,
-  "Gamilaraay", 150.4, -32.4, 0,
+  "Gamilaraay", 150.4, -32.3, 0,
   "Dharug", 150.9, -33.9, 0
 )
 
@@ -85,7 +85,7 @@ ggplot2::ggplot() +
     data=language_names,
     ggplot2::aes(x=lon, y=lat, label=language, angle=angle),
     fontface="bold",
-    size=18,
+    size=17,
     size.unit="pt",
     show.legend=F
   ) +

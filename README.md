@@ -8,4 +8,4 @@ Manuscript files for my work-in-progress article on Charles Harpur, Eliza Hamilt
 
 **Code:** [MIT License](https://mit-license.org/)
 
-**Prose and Data:** The prose of the manuscript and the files in [data] are available under the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.en) license.
+**Prose and Data:** The prose of the manuscript and the files in [data](data) are available under the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.en) license.

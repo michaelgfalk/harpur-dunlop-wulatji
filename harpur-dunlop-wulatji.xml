@@ -1225,9 +1225,12 @@ philosophy of language; terra nullius</kwd>
   and Fotheringham 1987</xref>), while his female contemporaries such as
   Dunlop are labelled “sentimental.” Harpur and Dunlop’s shared
   empiricism, however, suggests that this distinction is illusory. Like
-  earlier Romantics, such as Samuel Taylor Coleridge or Felicia Hemans,
-  both Harpur and Dunlop seek the “One Mind” that is immanent in
-  experience. Wu
+  earlier Romantics, such as Samuel Taylor Coleridge
+  (<xref alt="1997" rid="ref-coleridge_eolian_1997" ref-type="bibr">1997</xref>)
+  and Felicia Hemans
+  (<xref alt="1839" rid="ref-hemans_beings_1839" ref-type="bibr">1839</xref>),
+  Harpur and Dunlop seek the “One Mind” or “soul’s world” that is
+  immanent in experience. Wu
   (<xref alt="2021, 69" rid="ref-wu_morning_2021" ref-type="bibr">2021,
   69</xref>) is therefore quite correct when he writes: “Dunlop realised
   as clearly as any of the Romantic poets that art lives in the realm of
@@ -2058,6 +2061,42 @@ philosophy of language; terra nullius</kwd>
       <publisher-loc>Carlton, Victoria</publisher-loc>
       <year iso-8601-date="2023">2023</year>
       <isbn>978-0-522-87878-3</isbn>
+    </element-citation>
+  </ref>
+  <ref id="ref-hemans_beings_1839">
+    <element-citation publication-type="chapter">
+      <person-group person-group-type="author">
+        <name><surname>Hemans</surname><given-names>Felicia</given-names></name>
+      </person-group>
+      <article-title>The Beings of the Mind</article-title>
+      <source>Works of Mrs. Hemans, with a Memoir by her Sister</source>
+      <person-group person-group-type="editor">
+        <name><surname>Browne</surname><given-names>Harriett</given-names></name>
+      </person-group>
+      <publisher-name>Blackwood</publisher-name>
+      <publisher-loc>Edinburgh</publisher-loc>
+      <year iso-8601-date="1839">1839</year>
+      <volume>6</volume>
+      <fpage>116</fpage>
+      <lpage>119</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-coleridge_eolian_1997">
+    <element-citation publication-type="chapter">
+      <person-group person-group-type="author">
+        <name><surname>Coleridge</surname><given-names>Samuel</given-names></name>
+      </person-group>
+      <article-title>Eolian Harp</article-title>
+      <source>The Complete Poems of Samuel Taylor Coleridge</source>
+      <person-group person-group-type="editor">
+        <name><surname>Keach</surname><given-names>William</given-names></name>
+      </person-group>
+      <publisher-name>Penguin</publisher-name>
+      <publisher-loc>London; New York</publisher-loc>
+      <year iso-8601-date="1997-04">1997</year><month>04</month>
+      <isbn>978-0-14-042353-2</isbn>
+      <fpage>87</fpage>
+      <lpage>88</lpage>
     </element-citation>
   </ref>
 </ref-list>
@@ -3410,9 +3449,12 @@ dbl (2): latitude, longitude
   and Fotheringham 1987</xref>), while his female contemporaries such as
   Dunlop are labelled “sentimental.” Harpur and Dunlop’s shared
   empiricism, however, suggests that this distinction is illusory. Like
-  earlier Romantics, such as Samuel Taylor Coleridge or Felicia Hemans,
-  both Harpur and Dunlop seek the “One Mind” that is immanent in
-  experience. Wu
+  earlier Romantics, such as Samuel Taylor Coleridge
+  (<xref alt="1997" rid="ref-coleridge_eolian_1997-nb-article" ref-type="bibr">1997</xref>)
+  and Felicia Hemans
+  (<xref alt="1839" rid="ref-hemans_beings_1839-nb-article" ref-type="bibr">1839</xref>),
+  Harpur and Dunlop seek the “One Mind” or “soul’s world” that is
+  immanent in experience. Wu
   (<xref alt="2021, 69" rid="ref-wu_morning_2021-nb-article" ref-type="bibr">2021,
   69</xref>) is therefore quite correct when he writes: “Dunlop realised
   as clearly as any of the Romantic poets that art lives in the realm of
@@ -4245,6 +4287,42 @@ dbl (2): latitude, longitude
       <publisher-loc>Carlton, Victoria</publisher-loc>
       <year iso-8601-date="2023">2023</year>
       <isbn>978-0-522-87878-3</isbn>
+    </element-citation>
+  </ref>
+  <ref id="ref-hemans_beings_1839-nb-article">
+    <element-citation publication-type="chapter">
+      <person-group person-group-type="author">
+        <name><surname>Hemans</surname><given-names>Felicia</given-names></name>
+      </person-group>
+      <article-title>The Beings of the Mind</article-title>
+      <source>Works of Mrs. Hemans, with a Memoir by her Sister</source>
+      <person-group person-group-type="editor">
+        <name><surname>Browne</surname><given-names>Harriett</given-names></name>
+      </person-group>
+      <publisher-name>Blackwood</publisher-name>
+      <publisher-loc>Edinburgh</publisher-loc>
+      <year iso-8601-date="1839">1839</year>
+      <volume>6</volume>
+      <fpage>116</fpage>
+      <lpage>119</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-coleridge_eolian_1997-nb-article">
+    <element-citation publication-type="chapter">
+      <person-group person-group-type="author">
+        <name><surname>Coleridge</surname><given-names>Samuel</given-names></name>
+      </person-group>
+      <article-title>Eolian Harp</article-title>
+      <source>The Complete Poems of Samuel Taylor Coleridge</source>
+      <person-group person-group-type="editor">
+        <name><surname>Keach</surname><given-names>William</given-names></name>
+      </person-group>
+      <publisher-name>Penguin</publisher-name>
+      <publisher-loc>London; New York</publisher-loc>
+      <year iso-8601-date="1997-04">1997</year><month>04</month>
+      <isbn>978-0-14-042353-2</isbn>
+      <fpage>87</fpage>
+      <lpage>88</lpage>
     </element-citation>
   </ref>
 </ref-list>

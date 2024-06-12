@@ -1349,12 +1349,21 @@ philosophy of language; terra nullius</kwd>
   2021, 113</xref>). They wrote vexed and contradictory poetry, whose
   vexation has lost none of its pertinence in the third century of
   Australia’s colonisation.</p>
-  <p>Wulatji, meanwhile, can speak for himself.</p>
+  <p>I would not presume to interpret Wulatji’s poetry. Once it was
+  spoken for a white settler. Today it speaks by and for Indigenous
+  Australians. I hope one day to sit at their feet and learn its
+  mystery.</p>
 </sec>
 <sec id="acknowledgements">
   <title>6 Acknowledgements</title>
-  <p>I am grateful to Jim Wafer and Grace Karskens for sharing their
-  unpublished notes on Harpur’s <italic>Kangaroo Hunt</italic>.</p>
+  <p>I live on the unceded lands of the Dharug and Gundungurra peoples,
+  and work on the unceded lands of the Wurundjuri Woiwurrung people of
+  the Kulin nation. I acknowledge their sovereignty over these lands,
+  and extend my respect to their elders. I acknowledge the Indigenous
+  informants of many nations whose words informed Harpur, Dunlop and the
+  more recent scholarship on which I draw. I am grateful also to Jim
+  Wafer and Grace Karskens for sharing their unpublished notes on
+  Harpur’s <italic>Kangaroo Hunt</italic>.</p>
 </sec>
 </body>
 
@@ -2228,7 +2237,7 @@ themselves at home in the colony.
 </front-stub>
 
 <body>
-<sec id="nb-code-cell-1-nb-article" specific-use="notebook-code">
+<sec specific-use="notebook-content">
 <code language="r script"># Setup cell
 knitr::opts_chunk$set(echo = FALSE)
 options(knitr.kable.NA = '')
@@ -2322,9 +2331,14 @@ dunlop &lt;- file.path(DATA_DIR, &quot;dunlop-lang.xlsx&quot;) |&gt; readxl::rea
   and “rapid Hunter” rivers where Harpur spent his youth and early
   adulthood (h209-bf). It is nonetheless tricky to precisely localise
   the poem’s Indigenous vocabulary.</p>
-  <sec id="cell-fig-map-nb-article" specific-use="notebook-code">
+  <sec id="cell-fig-map-nb-article" specific-use="notebook-content">
   <code language="r script"># Geoscience Australia topographic data
 coastline &lt;- sf::read_sf(file.path(DATA_DIR, &quot;framework&quot;))</code>
+  <boxed-text>
+    <preformat>Warning in CPL_read_ogr(dsn, layer, query, as.character(options), quiet, :
+automatically selected the first layer in a data source containing more than
+one.</preformat>
+  </boxed-text>
   <code language="r script">rivers &lt;- sf::read_sf(file.path(DATA_DIR, &quot;drainage&quot;)) |&gt; 
   dplyr::filter(stringr::str_detect(NAME, &quot;HAWKESBURY|NEPEAN|HUNTER&quot;))
 
@@ -2346,6 +2360,16 @@ language_names &lt;- tibble::tribble(
 
 # Geocoded from Nominatim
 towns &lt;- readr::read_csv(file.path(DATA_DIR, &quot;towns.csv&quot;))</code>
+  <boxed-text>
+    <preformat>Rows: 7 Columns: 5
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: &quot;,&quot;
+chr (3): name, address, query
+dbl (2): latitude, longitude
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</preformat>
+  </boxed-text>
   <code language="r script">ggplot2::ggplot() +
   ggplot2::geom_sf(data = coastline, colour=&quot;darkgrey&quot;) +
   ggplot2::geom_sf(data = rivers, colour=&quot;lightblue&quot;) +
@@ -2386,21 +2410,6 @@ towns &lt;- readr::read_csv(file.path(DATA_DIR, &quot;towns.csv&quot;))</code>
     Austlang.</p></caption>
     <graphic mimetype="image" mime-subtype="png" xlink:href="harpur-dunlop-wulatji_files/figure-jats/fig-map-1.png" />
   </fig>
-  <sec id="cell-fig-map-output-0-nb-article" specific-use="notebook-output">
-  <preformat>Warning in CPL_read_ogr(dsn, layer, query, as.character(options), quiet, :
-automatically selected the first layer in a data source containing more than
-one.</preformat>
-  </sec>
-  <sec id="cell-fig-map-output-1-nb-article" specific-use="notebook-output">
-  <preformat>Rows: 7 Columns: 5
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: &quot;,&quot;
-chr (3): name, address, query
-dbl (2): latitude, longitude
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</preformat>
-  </sec>
   </sec>
   <p>My comparison of Harpur and Dunlop has two aims. The first aim is
   to contrast Dunlop’s and Harpur’s poetics: I argue that Dunlop is a
@@ -2596,7 +2605,7 @@ dbl (2): latitude, longitude
   words probably appear here in English verse for the first time, and
   probably all originate in Wulatji’s speech (“gherool” and “Amygest”
   being the difficult cases).</p>
-  <sec id="nb-code-cell-2-nb-article" specific-use="notebook-code">
+  <sec specific-use="notebook-content">
   <code language="r script">knitr::kable(dunlop)</code>
   <fig id="tbl-dunlop-lang-nb-article">
     <caption><p>Table 1: Indigenous vocabulary in Dunlop’s translation
@@ -2893,7 +2902,7 @@ dbl (2): latitude, longitude
   appears in the 1843 newspaper extract. When did Harpur learn and
   insert the other words? Despite these problems, it is possible to find
   all but one of Harpur’s words in modern dictionaries.</p>
-  <sec id="nb-code-cell-3-nb-article" specific-use="notebook-code">
+  <sec specific-use="notebook-content">
   <code language="r script">knitr::kable(harpur)</code>
   <fig id="tbl-harpur-lang-nb-article">
     <caption><p>Table 2: Indigenous Vocabulary in <italic>The Kangaroo
@@ -3573,12 +3582,21 @@ dbl (2): latitude, longitude
   2021, 113</xref>). They wrote vexed and contradictory poetry, whose
   vexation has lost none of its pertinence in the third century of
   Australia’s colonisation.</p>
-  <p>Wulatji, meanwhile, can speak for himself.</p>
+  <p>I would not presume to interpret Wulatji’s poetry. Once it was
+  spoken for a white settler. Today it speaks by and for Indigenous
+  Australians. I hope one day to sit at their feet and learn its
+  mystery.</p>
 </sec>
 <sec id="acknowledgements-nb-article">
   <title>6 Acknowledgements</title>
-  <p>I am grateful to Jim Wafer and Grace Karskens for sharing their
-  unpublished notes on Harpur’s <italic>Kangaroo Hunt</italic>.</p>
+  <p>I live on the unceded lands of the Dharug and Gundungurra peoples,
+  and work on the unceded lands of the Wurundjuri Woiwurrung people of
+  the Kulin nation. I acknowledge their sovereignty over these lands,
+  and extend my respect to their elders. I acknowledge the Indigenous
+  informants of many nations whose words informed Harpur, Dunlop and the
+  more recent scholarship on which I draw. I am grateful also to Jim
+  Wafer and Grace Karskens for sharing their unpublished notes on
+  Harpur’s <italic>Kangaroo Hunt</italic>.</p>
 </sec>
 </body>
 

@@ -18,10 +18,11 @@ manuscript:
 format:
   html:
     smooth-scroll: true
-  sagej-pdf:
-    classoption: [Crown,times,sageh]
-    # Allow more than 10 footnotes
-    header-includes: |
-      \usepackage[perpage]{footmisc}
+  # sagej-pdf:
+  #   classoption: [Crown,times,sageh]
+  #   # Allow more than 10 footnotes
+  #   header-includes: |
+  #     \usepackage[perpage]{footmisc}
+  docx: default
 execute:
   freeze: auto

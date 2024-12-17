@@ -15,7 +15,7 @@ towns <- tibble::tribble(
     nominatimlite::geo_lite(address, lat = "latitude", long = "longitude"),
     name = dplyr::case_when(
       name == "Sydney" ~ "Gadigal/Sydney",
-      name == "Newcastle" ~ "Muloobinbah/\nNewcastle",
+      name == "Newcastle" ~ "Muloobinba/\nNewcastle",
       .default = name
     )
   ) |>
